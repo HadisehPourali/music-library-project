@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .import views
+from song.views import artist
 
 urlpatterns = [
     path('say-hello/', views.hello_world),
     path('admin/', admin.site.urls),
     path('', views.home),
+    path('artist', artist),
 ]
