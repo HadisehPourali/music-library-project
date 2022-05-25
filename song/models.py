@@ -7,6 +7,9 @@ class Artist(models.Model):
     birth_year = models.IntegerField()
     genre = models.CharField(max_length=150)
 
+    def __str__(self):
+        return self.name
+
 
 class Song(models.Model):
     Title = models.CharField(max_length=250)
